@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall  -Wextra
+EXECUTABLE = server
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): server.c
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) server.c
+
+clean:
+	rm -f $(EXECUTABLE)
